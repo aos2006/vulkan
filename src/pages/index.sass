@@ -144,6 +144,11 @@ body
     min-height: 500px!important
     & .feature-list__item
       min-height: 117px!important
+  &:last-of-type
+    & .content
+      +r(768px)
+        height: 100%
+
 
 .lalal
   border: 1px solid green
@@ -155,7 +160,7 @@ body
   flex-direction: column
   align-items: center
   justify-content: space-between
-//height: 100%
+  //height: 100%
 
 .title
   text-align: center
@@ -194,7 +199,7 @@ body
     flex-direction: column
     align-items: center
     justify-content: center
-    height: 100vh
+    height: 100%
   &__item
     padding: 16px
     text-align: center
