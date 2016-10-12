@@ -46,12 +46,14 @@ $(document).ready(function(){
     return;
   })
 
-  inputTel.on('foucs', function() {
-    $('.container').css('height', deviceHeight)
+  inputTel.on('focus', function() {
+    $('.container').css('height', deviceHeight);
+    console.log('focus');
   })
 
   inputTel.on('blur', function() {
-    $('.container').css('height', '100vh')
+    $('.container').css('height', '100vh');
+    console.log('deviceHeight');
   })
 
   inputTel.inputmask({
