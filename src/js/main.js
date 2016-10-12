@@ -16,6 +16,7 @@ $(document).ready(function(){
     var isChcked = $($(ev.currentTarget).parent().find('.js-checkbox')).is(':checked');
     var isValidInput = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(selfInput.val());
     if (isChcked && isValidInput) {
+      $(ev.currentTarget).parent().find('label').removeClass('error')
       selfInput.removeClass('form__input--error');
       console.log('go');
       $.ajax({
@@ -29,12 +30,17 @@ $(document).ready(function(){
     }
 
     if (!isValidInput && selfInput.val() === '') {
-      console.log('not valid');
       selfInput.addClass('form__input--error');
     }
 
     if (!isChcked) {
-      console.log('not checked');
+      var label = $(ev.currentTarget).parent().find('label');
+      if (label.hasClass('error')) {
+        label.removeClass('error');
+        label.addClass('error');
+      }
+      label.addClass('error');
+
       return;
     }
   })

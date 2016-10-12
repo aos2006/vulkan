@@ -12,8 +12,13 @@ input[type="tel"]:-ms-input-placeholder
 input[type="checkbox"]:checked+label:before
   top: 50%
   margin-top: -11px
-  border-right-color: #fff
-  border-bottom-color: #fff
+  border-top-color: transparent
+  border-left-color: transparent
+  border-right-color: #fff!important
+  border-bottom-color: #fff!important
+  animation: none!important
+input[type="checkbox"]:checked+label
+  color: #fff!important
 body
   line-height: 1
   background-color: #000
@@ -23,6 +28,10 @@ body
   background-position: 0 0
 .out
   position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
   padding: 1% 0
   height: 100%
   +r(1250px)
@@ -116,6 +125,11 @@ body
       height: auto
       font-size: 2.982107vh
       line-height: 1.5
+      &.error
+        color: red
+      &.error:before
+        border-color: red
+        animation: vibroBox 1s linear infinite
       +r(768px)
         font-size: 20px
       &:before
@@ -130,9 +144,11 @@ body
     font-weight: 400
     text-align: center
     text-transform: uppercase
-    line-height: 1.5
+    line-height: 1
+    letter-spacing: 0!important
     +r(768px)
       font-size: 25px
+      letter-spacing: 2px!important
 
 .container
   max-width: 1366px
@@ -150,6 +166,7 @@ body
       min-height: 550px!important
       & .feature-list__item
         min-height: 117px!important
+
   &:last-of-type
     & .content
       +r(768px)
@@ -258,3 +275,22 @@ body
         +r(768px)
           font-size: 35px
 
+@keyframes vibroBox
+  0%
+    left: 0
+  20%
+    left: 2px
+  30%
+    left: 0
+  40%
+    left: 2px
+  50%
+    left: 0
+  60%
+    left: 2px
+  70%
+    left: 0
+  80%
+    left: 2px
+  100%
+    left: 0
