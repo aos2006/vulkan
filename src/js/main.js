@@ -4,7 +4,12 @@ $(document).ready(function(){
   var modal = $('.js-modal');
   var buttonSubmit = $('.js-submit');
   var deviceHeight = $(window).height();
+  var deviceWidth = $(window).width();
 
+  if (deviceWidth <= 800) {
+    $('body').css('height', deviceHeight * 2);
+    $('.container').css('height', deviceHeight);
+  }
   buttonSubmit.on('click', function(ev){
     ev.preventDefault();
     var selfInput = $(ev.currentTarget).parent().find('.js-phone');
@@ -46,20 +51,20 @@ $(document).ready(function(){
     return;
   })
 
-  inputTel.on('focus', function() {
-    //$('body').animate({
-    //  scrollTop: '30px'
-    //}, 1000)
-    $('body').css({
-      overflow: 'hidden'
-    });
-    //$('.out').css('height', deviceHeight);
-  })
-
-  inputTel.on('blur', function() {
-    $('body').css('overflow', 'visible');
-    $('.out').css('height', '100%');
-  })
+  //inputTel.on('focus', function() {
+  //  //$('body').animate({
+  //  //  scrollTop: '30px'
+  //  //}, 1000)
+  //  $('body').css({
+  //    overflow: 'hidden'
+  //  });
+  //  //$('.out').css('height', deviceHeight);
+  //})
+  //
+  //inputTel.on('blur', function() {
+  //  $('body').css('overflow', 'visible');
+  //  $('.out').css('height', '100%');
+  //})
 
   inputTel.inputmask({
     alias: 'phone',
