@@ -47,10 +47,12 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
+    $('body').css('overflow', 'hidden');
     $('.out').css('height', deviceHeight);
   })
 
   inputTel.on('blur', function() {
+    $('body').css('overflow', 'visible');
     $('.out').css('height', '100%');
   })
 
