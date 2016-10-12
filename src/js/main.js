@@ -47,6 +47,9 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
+    $('body').animate({
+      scrollTop: '30px'
+    }, 1000)
     $('body').css({
       height: deviceHeight,
       overflow: 'hidden'
