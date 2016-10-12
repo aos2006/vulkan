@@ -20,7 +20,9 @@ body
   background-size: cover
   background-repeat: no-repeat
   background-position: 0 0
+  background-color: #000
   height: 100%
+  padding: 2% 0
   +r(1250px)
     background-position: 50% 50%
 
@@ -59,7 +61,7 @@ body
   max-width: 409px
   margin-left: auto
   margin-right: auto
-  margin-bottom: 55px
+  margin-bottom: 5.467197vh
   &__input
     padding: 25px 0
     max-width: 100%
@@ -69,7 +71,7 @@ body
     border: 1px solid #fff
     border-radius: 3px
     text-align: center
-    font-size: 40px
+    font-size: 3.976143vh
     &--error
       border-color: red
     &:focus
@@ -87,19 +89,22 @@ body
       background-color: #ffb200
     &:focus
       background-color: #ffb200
+    +r(768px)
+      padding-left: 70px
+      padding-right: 70px
   &__accept
-    margin-bottom: 30px
+    margin-bottom: 2.982107vh
     & label
-      font-size: 30px
+      font-size: 2.982107vh
       &:before
         top: 50%
         border-color: #fff
         transform: translateY(-50%)
   &__input-container
-    margin-bottom: 31px
+    margin-bottom: 3.081511vh
   &__descr
-    margin-bottom: 25px
-    font-size: 60px
+    margin-bottom: 2.485089vh
+    font-size: 5.964215vh
     font-weight: 400
     text-align: center
     text-transform: uppercase
@@ -107,20 +112,31 @@ body
 
 .container
   max-width: 1366px
-  height: 100%
   margin-left: auto
   margin-right: auto
+  +r(820px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    padding: 0 5%
+    &:last-of-type
+      background-color: #000
+
 
 
 .content
-  height: 100%
-  padding: 2% 0
+  //height: 100%
 
 .title
   text-align: center
-  font-size: 81px
+  font-size: 8.05169vh
   margin-bottom: -25px
   font-weight: 400
+  +r(768px)
+    font-size: 45px
 .karton
   font-family: 'Cabana', sans-serif
   color: #fff
@@ -129,48 +145,53 @@ body
   color: #eeb122
 .subtitle
   margin-bottom: 30px
-  font-size: 80px
+  font-size: 7.952286vh
   text-transform: lowercase
   font-weight: 400
   text-align: center
+  +r(768px)
+    font-size: 45px
 
 
 .feature-list
   display: flex
+  width: 100%
   max-width: 940px
   margin-left: auto
   margin-right: auto
   flex-wrap: wrap
   justify-content: space-between
   align-items: flex-start
-  +r(1250px)
+  +r(820px)
     flex-direction: column
-    justify-content: flex-start
     align-items: center
+    justify-content: flex-start
   &__item
     padding: 16px
     text-align: center
-    width: 281px
+    width: 29.089027%
     background-color: rgba(0, 0, 0, .8)
     border: 1px solid #fff
     border-radius: 3px
-    height: 216px
+    height: 21.471173vh
     display: flex
     flex-direction: column
     align-items: center
     justify-content: space-between
     cursor: pointer
+    +r(820px)
+      width: 281px
     +r(1250px)
       margin-bottom: 30px
   &__title
-    font-size: 40px
+    font-size: 3.976143vh
     font-weight: 400
     line-height: 0.91
   &__txt
     position: relative
     margin-top: auto
     white-space: nowrap
-    font-size: 36px
+    font-size: 3.578529vh
     font-weight: 400
     line-height: 1.36
     &:first-of-type
@@ -180,7 +201,7 @@ body
         margin-right: 10px
         color: #737373
         font-family: 'karton', sans-serif
-        font-size: 36px
+        font-size: 3.578529vh
         font-weight: 400
         line-height: 1.36
 
