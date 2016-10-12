@@ -9,7 +9,7 @@ $(document).ready(function(){
   if (deviceWidth <= 800) {
     $('body').css('height', deviceHeight * 2);
     $('.container').css('height', deviceHeight);
-    сonsole.log('bober');
+    console.log('laga');
   }
   buttonSubmit.on('click', function(ev){
     ev.preventDefault();
@@ -47,6 +47,7 @@ $(document).ready(function(){
   })
 
   item.on('click', function() {
+    console.log('clicked');
     modal.addClass('popup--show');
   })
 
