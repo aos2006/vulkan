@@ -70,6 +70,8 @@ body
   margin-left: auto
   margin-right: auto
   margin-bottom: 5.467197vh
+  +r(768px)
+    margin-bottom: 0
   &__input
     padding: 25px 0
     max-width: 100%
@@ -143,7 +145,11 @@ body
 .lalal
   border: 1px solid black
 .content
-  //height: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+//height: 100%
 
 .title
   text-align: center
