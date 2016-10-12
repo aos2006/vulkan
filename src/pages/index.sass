@@ -1,0 +1,183 @@
++font('hellios', 'hellios')
++font('Cabana', 'Cabana')
+
+input[type="tel"]::-webkit-input-placeholder
+  color: #fff
+input[type="tel"]::-moz-placeholder
+  color: #fff
+input[type="tel"]:-moz-placeholder
+  color: #fff
+input[type="tel"]:-ms-input-placeholder
+  color: #fff
+input[type="checkbox"]:checked+label:before
+  border-right-color: #fff
+  border-bottom-color: #fff
+body
+  line-height: 1
+.out
+  position: relative
+  background-image: url('../img/background.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 0 0
+  +r(1250px)
+    background-position: 50% 50%
+
+.popup
+  position: fixed
+  transform: translateY(-100%)
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 3
+  background-color: rgba(0, 0, 0, .9)
+  border: 1px solid black
+  transition: transform .2s linear
+  &--show
+    transform: translateY(0)
+    transition: transform .2s linear
+  &__form
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    & .title
+      margin-bottom: 30px
+      +r(768px)
+        font-size: 50px
+    +r(768px)
+      left: 0
+      right: 0
+      padding: 0 30px
+      transform: translate(0, -50%)
+      width: 100%
+
+
+.form
+  max-width: 409px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 55px
+  &__input
+    padding: 25px 0
+    max-width: 100%
+    width: 100%
+    display: block
+    background-color: rgba(0, 0, 0, .8)
+    border: 1px solid #fff
+    border-radius: 3px
+    text-align: center
+    font-size: 40px
+    &--error
+      border-color: red
+    &:focus
+      border: 1px solid #fff
+    &.hellios
+      color: #fff
+  &__btn
+    display: block
+    width: 100%
+    padding-top: 20px
+    padding-bottom: 15px
+    background-color: #ffb200
+    border-radius: 5px
+    &:active
+      background-color: #ffb200
+    &:focus
+      background-color: #ffb200
+  &__accept
+    margin-bottom: 30px
+    & label
+      font-size: 30px
+      &:before
+        top: 50%
+        border-color: #fff
+        transform: translateY(-50%)
+  &__input-container
+    margin-bottom: 31px
+  &__descr
+    margin-bottom: 25px
+    font-size: 60px
+    font-weight: 400
+    text-align: center
+    text-transform: uppercase
+    line-height: 1
+
+.container
+  max-width: 1366px
+  margin-left: auto
+  margin-right: auto
+
+
+.content
+  padding-top: 120px
+  padding-bottom: 143px
+.title
+  text-align: center
+  font-size: 81px
+  margin-bottom: -25px
+  font-weight: 400
+.karton
+  font-family: 'Cabana', sans-serif
+  color: #fff
+.hellios
+  font-family: "hellios", sans-serif
+  color: #eeb122
+.subtitle
+  margin-bottom: 30px
+  font-size: 80px
+  text-transform: lowercase
+  font-weight: 400
+  text-align: center
+
+
+.feature-list
+  display: flex
+  max-width: 940px
+  margin-left: auto
+  margin-right: auto
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: flex-start
+  +r(1250px)
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+  &__item
+    padding: 16px
+    text-align: center
+    width: 281px
+    background-color: rgba(0, 0, 0, .8)
+    border: 1px solid #fff
+    border-radius: 3px
+    height: 216px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    cursor: pointer
+    +r(1250px)
+      margin-bottom: 30px
+  &__title
+    font-size: 40px
+    font-weight: 400
+    line-height: 0.91
+  &__txt
+    position: relative
+    margin-top: auto
+    white-space: nowrap
+    font-size: 36px
+    font-weight: 400
+    line-height: 1.36
+    &:first-of-type
+      &:after
+        content: '|'
+        margin-left: 15px
+        margin-right: 10px
+        color: #737373
+        font-family: 'karton', sans-serif
+        font-size: 36px
+        font-weight: 400
+        line-height: 1.36
+
