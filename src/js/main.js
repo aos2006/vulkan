@@ -3,7 +3,7 @@ $(document).ready(function(){
   var item = $('.js-item');
   var modal = $('.js-modal');
   var buttonSubmit = $('.js-submit');
-
+  var deviceHeight = $(window).height();
 
   buttonSubmit.on('click', function(ev){
     ev.preventDefault();
@@ -44,6 +44,14 @@ $(document).ready(function(){
     }
 
     return;
+  })
+
+  inputTel.on('foucs', function() {
+    $('.container').css('height', deviceHeight)
+  })
+
+  inputTel.on('blur', function() {
+    $('.container').css('height', '100vh')
   })
 
   inputTel.inputmask({
