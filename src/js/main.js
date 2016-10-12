@@ -47,12 +47,12 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
-    $('.container').css('height', deviceHeight);
+    $('.out').css('height', deviceHeight);
     console.log('focus');
   })
 
   inputTel.on('blur', function() {
-    $('.container').css('height', '100vh');
+    $('.out').css('height', '100vh');
     console.log('deviceHeight');
   })
 
