@@ -10,6 +10,8 @@ input[type="tel"]:-moz-placeholder
 input[type="tel"]:-ms-input-placeholder
   color: #fff
 input[type="checkbox"]:checked+label:before
+  top: 50%
+  margin-top: -11px
   border-right-color: #fff
   border-bottom-color: #fff
 body
@@ -77,6 +79,8 @@ body
     border-radius: 3px
     text-align: center
     font-size: 3.976143vh
+    +r(768px)
+      font-size: 42px
     &--error
       border-color: red
     &:focus
@@ -100,8 +104,11 @@ body
   &__accept
     margin-bottom: 2.982107vh
     & label
+      height: auto
       font-size: 2.982107vh
       line-height: 1.2
+      +r(768px)
+        font-size: 31px
       &:before
         top: 50%
         border-color: #fff
