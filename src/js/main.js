@@ -9,6 +9,7 @@ $(document).ready(function(){
   if (deviceWidth <= 800) {
     $('body').css('height', deviceHeight * 2);
     $('.container').css('height', deviceHeight);
+    сonsole.log('bober');
   }
   buttonSubmit.on('click', function(ev){
     ev.preventDefault();
