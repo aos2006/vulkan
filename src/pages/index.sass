@@ -94,19 +94,22 @@ body
   &__btn
     display: block
     width: 100%
-    padding-left: 17.114914%
-    padding-right: 17.114914%
-    padding-top: 20px
-    padding-bottom: 15px
+    height: 70px
+    line-height: 76px
+    overflow: hidden
     background-color: #ffb200
     border-radius: 5px
+    color: #fff
+    font-family: 'hellios', sans-serif
+    font-size: 30px
+    text-transform: uppercase
     &:active
       background-color: #ffb200
     &:focus
       background-color: #ffb200
     +r(768px)
-     & img
-       max-width: 40%
+      height: 52px
+      line-height: 61px
   &__accept
     margin-bottom: 2.982107vh
     & label
@@ -143,10 +146,10 @@ body
     width: 100%
     height: 100%
     padding: 0 5%
-  @media screen and (orientation: landscape)
-    min-height: 500px!important
-    & .feature-list__item
-      min-height: 117px!important
+    @media screen and (orientation: landscape)
+      min-height: 550px!important
+      & .feature-list__item
+        min-height: 117px!important
   &:last-of-type
     & .content
       +r(768px)
@@ -168,11 +171,12 @@ body
 .title
   text-align: center
   font-size: 8.05169vh
-  margin-bottom: -25px
+  margin-bottom: -15px
   margin-top: 0
   font-weight: 400
-  line-height: 1.5
   +r(768px)
+    line-height: 1.5
+    margin-bottom: 5px
     font-size: 45px
 .karton
   font-family: 'Cabana', sans-serif
@@ -181,13 +185,15 @@ body
   font-family: "hellios", sans-serif
   color: #eeb122
 .subtitle
+  margin-top: 0
   margin-bottom: 2.982107vh
   font-size: 7.952286vh
   text-transform: lowercase
   font-weight: 400
   text-align: center
-  line-height: 1.5
+  line-height: 1
   +r(768px)
+    line-height: 1.5
     font-size: 40px
 
 
