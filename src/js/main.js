@@ -47,11 +47,9 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
-    $('body').scrollTo('.js-phone');
-
     $('body').css({
       height: deviceHeight,
-      overflow: hidden
+      overflow: 'hidden'
     });
     $('.out').css('height', deviceHeight);
   })
