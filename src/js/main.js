@@ -47,7 +47,7 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
-    $('.out').css('height', deviceHeight);
+    $('.out').css('height', 1024);
     console.log('focus');
   })
 
