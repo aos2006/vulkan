@@ -46,16 +46,6 @@ $(document).ready(function(){
     return;
   })
 
-  inputTel.on('focus', function() {
-    $('.out').css('height', 1024);
-    console.log('focus');
-  })
-
-  inputTel.on('blur', function() {
-    $('.out').css('height', '100vh');
-    console.log('deviceHeight');
-  })
-
   inputTel.inputmask({
     alias: 'phone',
     allowDropdown: false
