@@ -47,14 +47,13 @@ $(document).ready(function(){
   })
 
   inputTel.on('focus', function() {
-    $('body').animate({
-      scrollTop: '30px'
-    }, 1000)
+    //$('body').animate({
+    //  scrollTop: '30px'
+    //}, 1000)
     $('body').css({
-      height: deviceHeight,
       overflow: 'hidden'
     });
-    $('.out').css('height', deviceHeight);
+    //$('.out').css('height', deviceHeight);
   })
 
   inputTel.on('blur', function() {
